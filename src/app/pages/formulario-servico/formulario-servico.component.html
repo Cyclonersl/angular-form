@@ -1,0 +1,16 @@
+<div *ngIf="servico != undefined">
+  <h1 class="text-3xl font-bold">{{ servico.descricao }}</h1>
+  <div *ngFor="let campo of servico.formulario">
+    <label>{{ campo.label }}:</label>
+    <select>
+      <option>-- Selecione --</option>
+      <option *ngFor="let valor of campo.valores" value="{{ valor.id }}">
+        {{ valor.label }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<a [routerLink]="['/']" class="text-3xl font-bold underline">
+  Lista de Serviços
+</a>

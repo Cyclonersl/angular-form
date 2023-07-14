@@ -1,0 +1,29 @@
+{
+  "servicos": [
+    {
+      "id": 1,
+      "descricao": "Nome do serviço 1",
+      "comMatricula": true,
+      "formulario": [
+        {
+          "id": 1,
+          "label": "Campo 1",
+          "valores": [
+            { "id": 1, "label": "Valor 1" },
+            { "id": 2, "label": "Valor 2" },
+            { "id": 3, "label": "Valor 3" }
+          ]
+        },
+        {
+          "id": 2,
+          "label": "Campo 2",
+          "valores": [
+            { "id": 1, "label": "Valor 1" },
+            { "id": 2, "label": "Valor 2" },
+            { "id": 3, "label": "Valor 3" }
+          ]
+        }
+      ]
+    }
+  ]
+}
