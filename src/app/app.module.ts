@@ -8,6 +8,7 @@ import { FormularioServicoComponent } from './pages/formulario-servico/formulari
 import { ListaServicosComponent } from './pages/lista-servicos/lista-servicos.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AgendamentoAtendimentoComponent } from './pages/agendamento-atendimento/agendamento-atendimento.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,13 @@ import { AgendamentoAtendimentoComponent } from './pages/agendamento-atendimento
     PageNotFoundComponent,
     AgendamentoAtendimentoComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

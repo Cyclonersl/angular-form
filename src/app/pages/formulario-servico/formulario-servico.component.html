@@ -1,14 +1,24 @@
 <div *ngIf="servico != undefined">
   <h1 class="text-3xl font-bold">{{ servico.descricao }}</h1>
-  <div *ngFor="let campo of servico.formulario">
-    <label>{{ campo.label }}:</label>
-    <select>
-      <option>-- Selecione --</option>
-      <option *ngFor="let valor of campo.valores" value="{{ valor.id }}">
-        {{ valor.label }}
-      </option>
-    </select>
-  </div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="servicoForm">
+    <div *ngFor="let campo of servico.formulario" class="mb-6">
+      <label
+        for="campo_{{ campo.id }}"
+        class="block mb-2 text-sm font-medium text-gray-900"
+        >{{ campo.label }}:</label
+      >
+      <select
+        id="campo_{{ campo.id }}"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      >
+        <option>-- Selecione --</option>
+        <option *ngFor="let valor of campo.valores" value="{{ valor.id }}">
+          {{ valor.label }}
+        </option>
+      </select>
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
 </div>
 
 <a [routerLink]="['/']" class="text-3xl font-bold underline">
