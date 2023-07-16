@@ -1,12 +1,13 @@
-<ul>
-  <li>
-    <a [routerLink]="['/servico/1']" class="text-3xl font-bold underline">
-      Formulário serviço 1
+<div *ngFor="let categoria of categorias">
+  <h1 class="text-lg text-casanGreen">{{ categoria.descricao | uppercase }}</h1>
+  <div class="flex gap-4">
+    <a
+      *ngFor="let servico of categoria.servicos"
+      [routerLink]="servico.link"
+      class="bg-white min-w-[120px] p-2 text-center border border-casan rounded-xl shadow-md text-casan text-xs flex flex-col items-center leading-4"
+    >
+      <img [src]="servico.imagem" [alt]="servico.descricao" />
+      <span>{{ servico.descricao | uppercase }}</span>
     </a>
-  </li>
-  <li>
-    <a [routerLink]="['/servico']" class="text-3xl font-bold underline">
-      Serviço Incorreto
-    </a>
-  </li>
-</ul>
+  </div>
+</div>
