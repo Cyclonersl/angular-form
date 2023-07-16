@@ -20,6 +20,21 @@ export class ListaServicosComponent {
           imagem: '/assets/Icone_SegundaVia.png',
           link: '/servico/1',
         },
+        {
+          descricao: 'Segunda Via <br /> da Fatura 2',
+          imagem: '/assets/Icone_SegundaVia.png',
+          link: '/servico/1',
+        },
+        {
+          descricao: 'Segunda Via <br /> da Fatura 2',
+          imagem: '/assets/Icone_SegundaVia.png',
+          link: '/servico/1',
+        },
+        {
+          descricao: 'Segunda Via <br /> da Fatura 2',
+          imagem: '/assets/Icone_SegundaVia.png',
+          link: '/servico/1',
+        },
       ],
     },
     {
