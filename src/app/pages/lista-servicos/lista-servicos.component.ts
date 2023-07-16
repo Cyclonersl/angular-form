@@ -8,15 +8,15 @@ import { Component } from '@angular/core';
 export class ListaServicosComponent {
   categorias = [
     {
-      descricao: 'Serviços Mais acessados',
+      descricao: 'Mais acessados',
       servicos: [
         {
-          descricao: 'Segunda Via',
+          descricao: 'Segunda Via <br /> da Fatura',
           imagem: '/assets/Icone_SegundaVia.png',
           link: '/servico/1',
         },
         {
-          descricao: 'Segunda Via 2',
+          descricao: 'Segunda Via <br /> da Fatura 2',
           imagem: '/assets/Icone_SegundaVia.png',
           link: '/servico/1',
         },
@@ -26,12 +26,12 @@ export class ListaServicosComponent {
       descricao: 'Serviços de Fatura',
       servicos: [
         {
-          descricao: 'Segunda Via',
+          descricao: 'Segunda Via <br /> da Fatura',
           imagem: '/assets/Icone_SegundaVia.png',
           link: '/servico/1',
         },
         {
-          descricao: 'Outro serviço',
+          descricao: 'Outro<br/> serviço',
           imagem: '/assets/Icone_SegundaVia.png',
           link: '/servico/1',
         },
