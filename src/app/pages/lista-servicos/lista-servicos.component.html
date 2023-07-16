@@ -1,13 +1,17 @@
 <div *ngFor="let categoria of categorias">
-  <h1 class="text-lg text-casanGreen">{{ categoria.descricao | uppercase }}</h1>
+  <h1
+    class="text-lg text-casanGreen mb-5 mt-4 after:content-[''] after:block after:bg-casan after:h-[2px] after:w-12"
+  >
+    {{ categoria.descricao | uppercase }}
+  </h1>
   <div class="flex gap-4">
     <a
       *ngFor="let servico of categoria.servicos"
       [routerLink]="servico.link"
-      class="bg-white min-w-[120px] p-2 text-center border border-casan rounded-xl shadow-md text-casan text-xs flex flex-col items-center leading-4"
+      class="bg-white min-w-[120px] p-2 text-center border border-casan rounded-xl shadow-gray-400 shadow-md text-casan text-xs flex flex-col items-center leading-4 hover:scale-110 ease-in duration-300"
     >
-      <img [src]="servico.imagem" [alt]="servico.descricao" />
-      <span>{{ servico.descricao | uppercase }}</span>
+      <img [src]="servico.imagem" [alt]="servico.descricao" class="w-14 h-14" />
+      <span [innerHTML]="servico.descricao | uppercase"></span>
     </a>
   </div>
 </div>
